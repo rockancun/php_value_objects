@@ -1,0 +1,29 @@
+{
+  "name": "rockancun/valueobjects",
+  "description": "Collection of Value objects classes",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Gaston Hidalgo Marquez",
+      "email": "gaston.hikuri@gmail.com"
+    }
+  ],
+  "require": {},
+  "require-dev": {
+    "phpunit/phpunit": "^9.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "Src\\": "Src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Src\\": "Src",
+      "Tests\\": "Tests"
+    }
+  },
+  "scripts": {
+    "tests": "./vendor/bin/phpunit  Tests"
+  }
+}
