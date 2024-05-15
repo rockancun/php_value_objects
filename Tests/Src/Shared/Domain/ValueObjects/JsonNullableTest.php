@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Tests\Src\Shared\Domain\ValueObjects;
 
 use PHPUnit\Framework\TestCase;
+use Src\Shared\Domain\Exceptions\InvalidValueObjectException;
 use Tests\Src\Implementations\JsonNullableImp;
 
 final class JsonNullableTest extends TestCase
@@ -25,6 +26,15 @@ final class JsonNullableTest extends TestCase
         $valueObject = new JsonNullableImp($value);
 
         $this->assertEquals($value, $valueObject->value());
+    }
+
+    public function testAssertThrownInvalidValueObjectException(): void
+    {
+        $invalidJson = '{ "": "": "" } }';
+
+        $this->expectException(InvalidValueObjectException::class);
+
+        new JsonNullableImp($invalidJson);
     }
 
     public function testAssertEquals(): void

@@ -37,9 +37,7 @@ final class TextNullableTest extends TestCase
 
         $this->expectException(InvalidValueObjectException::class);
 
-        $valueObjectMinLengthText = new TextNullableImp($minLengthText);
-
-        $this->assertEquals($minLengthText, $valueObjectMinLengthText->value());
+        new TextNullableImp($minLengthText);
     }
 
     public function testAssertMaxTextThrownInvalidValueObjectException(): void
@@ -48,9 +46,7 @@ final class TextNullableTest extends TestCase
 
         $this->expectException(InvalidValueObjectException::class);
 
-        $valueObjectMaxLengthText = new TextNullableImp($maxLengthText);
-
-        $this->assertEquals($maxLengthText, $valueObjectMaxLengthText->value());
+        new TextNullableImp($maxLengthText);
     }
 
     public function testAssertEquals(): void
