@@ -14,12 +14,14 @@
   },
   "autoload": {
     "psr-4": {
-      "Src\\": "Src"
+      "Src\\": "Src",
+      "Example\\": "Example"
     }
   },
   "autoload-dev": {
     "psr-4": {
       "Src\\": "Src",
+      "Example\\": "Example",
       "Tests\\": "Tests"
     }
   },
